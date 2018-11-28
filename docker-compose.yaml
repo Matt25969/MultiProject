@@ -1,0 +1,35 @@
+---
+version: '3'
+services:
+  letterprod:
+    build:
+      context: ../MultiProject/Day_Two_Producer_Letter
+      dockerfile: Dockerfile
+    ports:
+    - "8080:8080"
+  numberprod:
+    build:
+      context: ../MultiProject/Day_Two_Producer_Number
+      dockerfile: Dockerfile
+    ports:
+    - "8081:8081"
+  prize:
+    build:
+      context: ../MultiProject/Day_Two_Producer_Prize
+      dockerfile: Dockerfile
+    ports:
+    - "8082:8082"
+  account:
+    build:
+      context: ../MultiProject/Spring_Day_Two2
+      dockerfile: Dockerfile
+    ports:
+    - "8083:8083"
+  client:
+    build:
+      context: ../MultiProject/fe
+      dockerfile: Dockerfile
+    ports:
+    - "3000:3000"
+...
+
